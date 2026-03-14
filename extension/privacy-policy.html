@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Learning Copilot — Privacy Policy</title>
+  <style>
+    :root { --primary: #5b5df1; --bg: #101122; --text: #e2e8f0; --muted: #94a3b8; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 2rem; max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem; background: linear-gradient(90deg, var(--primary), #a78bfa); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .updated { font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem; }
+    h2 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.5rem; }
+    p, li { font-size: 0.9rem; color: var(--muted); }
+    ul { padding-left: 1.25rem; margin: 0.5rem 0; }
+    li { margin-bottom: 0.35rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge { display: inline-block; background: rgba(91,93,241,0.15); border: 1px solid rgba(91,93,241,0.3); color: var(--primary); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: March 12, 2026</p>
+  <span class="badge">AI Learning Copilot</span>
+
+  <h2>1. Overview</h2>
+  <p>AI Learning Copilot (&ldquo;the Extension&rdquo;) is a Chrome browser extension that provides AI-powered explanations of web page content. Your privacy is important to us. This policy describes what data we collect, how we use it, and how we protect it.</p>
+
+  <h2>2. Data We Collect</h2>
+  <ul>
+    <li><strong>Page content (transient):</strong> When you click &ldquo;Explain This Page,&rdquo; the visible text of the current tab is extracted and sent to our backend for AI processing. This content is not stored permanently.</li>
+    <li><strong>Email address:</strong> If you choose to sign in, your email is used for authentication via Supabase and to manage your subscription.</li>
+    <li><strong>Usage counts:</strong> We track daily explanation counts per user to enforce free-tier limits and provide usage analytics.</li>
+    <li><strong>Explanation history:</strong> Explanations are stored locally in your browser (chrome.storage.local) and are never uploaded to external servers.</li>
+    <li><strong>API keys:</strong> If you connect a third-party AI provider, your API key is encrypted with AES-256-GCM and stored locally. It is never transmitted to our servers.</li>
+  </ul>
+
+  <h2>3. Data We Do NOT Collect</h2>
+  <ul>
+    <li>We do not collect browsing history or track which websites you visit.</li>
+    <li>We do not sell, share, or monetise any personal data.</li>
+    <li>We do not use cookies or third-party analytics trackers in the extension.</li>
+    <li>We do not store the raw page content after generating an explanation.</li>
+  </ul>
+
+  <h2>4. Third-Party Services</h2>
+  <ul>
+    <li><strong>Supabase:</strong> Used for user authentication and subscription record-keeping. Subject to the <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a>.</li>
+    <li><strong>Stripe:</strong> Used for payment processing. Subject to the <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy Policy</a>.</li>
+    <li><strong>OpenAI / Google / Anthropic / OpenRouter:</strong> If you connect an AI provider, page text is sent to that provider&rsquo;s API for processing, subject to the provider&rsquo;s own privacy policy.</li>
+  </ul>
+
+  <h2>5. Data Storage &amp; Security</h2>
+  <ul>
+    <li>Local data (history, API keys, settings) is stored in Chrome&rsquo;s sandboxed <code>chrome.storage.local</code>.</li>
+    <li>API keys are encrypted using AES-256-GCM via the Web Crypto API before storage.</li>
+    <li>Backend communication uses HTTPS exclusively.</li>
+    <li>Server-side secrets are stored as environment variables and are never exposed to the client.</li>
+  </ul>
+
+  <h2>6. Permissions Explained</h2>
+  <ul>
+    <li><strong>activeTab:</strong> Access the current tab&rsquo;s content only when you click the extension icon.</li>
+    <li><strong>storage:</strong> Store settings, history, and encrypted keys locally.</li>
+    <li><strong>scripting:</strong> Inject the content extraction script into the active tab on demand.</li>
+    <li><strong>alarms:</strong> Periodically refresh your authentication session in the background.</li>
+  </ul>
+
+  <h2>7. Data Retention &amp; Deletion</h2>
+  <p>Local explanation history can be cleared at any time via Settings &rarr; Clear All Data. Uninstalling the extension removes all locally stored data. Server-side usage logs are retained for billing purposes and can be deleted upon request.</p>
+
+  <h2>8. Children&rsquo;s Privacy</h2>
+  <p>The Extension is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this policy from time to time. Material changes will be communicated through the extension&rsquo;s update notes.</p>
+
+  <h2>10. Contact</h2>
+  <p>If you have questions about this privacy policy, please contact us at <a href="mailto:support@ailearningcopilot.com">support@ailearningcopilot.com</a>.</p>
+</body>
+</html>
