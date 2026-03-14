@@ -33,7 +33,7 @@ type HistoryEntry = {
 };
 
 // ─── Constants ─────────────────────────────────────────────────────────────────
-const apiBaseUrl = import.meta.env.VITE_API_URL;
+const apiBaseUrl = import.meta.env.VITE_API_URL || 'https://extension-of-google-backend-ahmad.netlify.app';
 
 const supabase = (() => {
   const url = import.meta.env.VITE_SUPABASE_URL;
