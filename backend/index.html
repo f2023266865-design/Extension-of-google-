@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extension Backend API</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --line: #dbe1ea;
+        --brand: #0f766e;
+      }
+      body {
+        margin: 0;
+        font-family: Segoe UI, Arial, sans-serif;
+        background: linear-gradient(180deg, #eef3fa 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+      .wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(680px, 100%);
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: 28px;
+      }
+      p {
+        margin: 0 0 14px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      code {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 2px 6px;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Backend Deployed Successfully</h1>
+        <p>
+          This Netlify site is an API backend for your Chrome extension. The root URL now serves this page so you
+          will not see a 404.
+        </p>
+        <p>Use these endpoints to test:</p>
+        <div class="row">
+          <a href="/api/ping">/api/ping</a>
+          <a href="/api/subscription">/api/subscription</a>
+        </div>
+        <p style="margin-top: 14px">
+          If <code>/api/ping</code> fails, check Netlify environment variables first.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
