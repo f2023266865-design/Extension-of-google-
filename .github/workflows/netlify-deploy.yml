@@ -20,8 +20,8 @@ jobs:
         run: npm ci
         working-directory: backend
 
-      - name: Build backend
-        run: npm run build
+      - name: Type-check backend
+        run: npm run check
         working-directory: backend
 
       - name: Install Netlify CLI
